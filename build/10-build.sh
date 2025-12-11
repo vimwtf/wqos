@@ -11,9 +11,16 @@ set -eoux pipefail
 
 # Source helper functions
 # shellcheck source=/dev/null
-# source /ctx/build/copr-helpers.sh
+source /ctx/build/copr-helpers.sh
 
 echo "::group:: Copy Custom Files"
+
+# Copy system files
+rsync -rvK /ctx/custom/system_files/ /
+
+mkdir -p /tmp/scripts/helpers
+install -Dm0755 /ctx/build/ghcurl /tmp/scripts/helpers/ghcurl
+export PATH="/tmp/scripts/helpers:$PATH"
 
 # Copy Brewfiles to standard location
 mkdir -p /usr/share/ublue-os/homebrew/
@@ -44,6 +51,10 @@ systemctl enable docker.socket
 systemctl enable podman.socket
 # Example: systemctl mask unwanted-service
 
-echo "::endgroup::"
+# Ensure all repos are disabled
+/ctx/build/validate-repos.sh
+
+# Cleanup
+/ctx/build/clean-stage.sh
 
 echo "Custom build complete!"
