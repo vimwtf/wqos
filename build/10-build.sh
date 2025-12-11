@@ -23,11 +23,10 @@ cp /ctx/custom/brew/*.Brewfile /usr/share/ublue-os/homebrew/
 mkdir -p /usr/share/ublue-os/just/
 find /ctx/custom/ujust -iname '*.just' -exec printf "\n\n" \; -exec cat {} \; >> /usr/share/ublue-os/just/60-custom.just
 
-# Copy Flatpak preinstall files
-mkdir -p /etc/flatpak/preinstall.d/
-cp /ctx/custom/flatpaks/*.preinstall /etc/flatpak/preinstall.d/
-
 echo "::endgroup::"
+
+# Preload Flatpaks
+/ctx/build/15-flatpaks.sh
 
 # Install additional packages
 /ctx/build/20-packages.sh

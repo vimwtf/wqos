@@ -78,3 +78,10 @@ install-vscode:
 [group('Apps')]
 install-gimp:
     ujust install-flatpak org.gimp.GIMP
+
+# Install wqos Flatpaks
+[group('Apps')]
+install-wqos-flatpaks:
+    #!/usr/bin/bash
+    flatpak remote-add --if-not-exists --system flathub https://flathub.org/repo/flathub.flatpakrepo
+    xargs flatpak --system -y install --or-update < /etc/ublue-os/wqos-flatpaks.list
