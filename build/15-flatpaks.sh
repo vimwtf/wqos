@@ -4,7 +4,7 @@
 set -oue pipefail
 
 echo "Copying Flatpak preinstalls..."
-
+mkdir -p /etc/flatpak/preinstall.d/
 while IFS= read -r line; do
   type=${line%/*}
   id=${line#*/}
