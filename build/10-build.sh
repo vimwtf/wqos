@@ -49,6 +49,9 @@ echo "::group:: System Configuration"
 # Enable/disable systemd services
 systemctl enable docker.socket
 systemctl enable podman.socket
+systemctl enable swtpm-workaround.service
+systemctl enable libvirt-workaround.service
+systemctl enable dx-groups.service
 # Example: systemctl mask unwanted-service
 
 # Ensure all repos are disabled
