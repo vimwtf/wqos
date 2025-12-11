@@ -13,14 +13,32 @@ FEDORA_PACKAGES=(
   cockpit-selinux
   cockpit-storaged
   cockpit-system
+  genisoimage
+  incus
+  incus-agent
+  iotop
   libvirt
   libvirt-nss
+  lxc
+  p7zip
+  p7zip-plugins
   podman-compose
   podman-machine
   podman-tui
-  incus
-  incus-agent
-  lxc
+  qemu
+  qemu-char-spice
+  qemu-device-display-virtio-gpu
+  qemu-device-display-virtio-vga
+  qemu-device-usb-redirect
+  qemu-img
+  qemu-system-x86-core
+  qemu-user-binfmt
+  qemu-user-static
+  tiptop
+  util-linux-script
+  virt-manager
+  virt-v2v
+  virt-viewer
 )
 
 echo "Installing ${#FEDORA_PACKAGES[@]} DX packages from Fedora repos..."
