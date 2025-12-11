@@ -85,3 +85,10 @@ install-wqos-flatpaks:
     #!/usr/bin/bash
     flatpak remote-add --if-not-exists --system flathub https://flathub.org/repo/flathub.flatpakrepo
     xargs flatpak --system -y install --or-update < /etc/ublue-os/wqos-flatpaks.list
+
+# Remove unwanted Flatpaks
+[group('Apps')]
+remove-unwanted-flatpaks:
+    #!/usr/bin/bash
+    flatpak remote-add --if-not-exists --system flathub https://flathub.org/repo/flathub.flatpakrepo
+    xargs flatpak -y remove < /etc/ublue-os/unwanted-flatpaks.list   

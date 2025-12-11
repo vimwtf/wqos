@@ -24,8 +24,8 @@ EOF
   fi
 done < /ctx/custom/flatpaks/wqos-flatpaks.list
 
-echo "Copying custom Flatpak list..."
-cp /ctx/custom/flatpaks/wqos-flatpaks.list /etc/ublue-os/wqos-flatpaks.list
+echo "Copying custom Flatpak lists..."
+cp /ctx/custom/flatpaks/*-flatpaks.list /etc/ublue-os/
 
 echo "Removing unwanted Flatpaks from system list..."
 while IFS= read -r line; do
