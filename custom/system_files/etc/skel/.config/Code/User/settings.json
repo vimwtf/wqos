@@ -1,9 +1,17 @@
 {
-    "window.titleBarStyle": "custom",
-    "editor.fontFamily": "'Cascadia Code', 'Droid Sans Mono', 'monospace', monospace, 'Symbols Nerd Font Mono'",
-    "update.mode": "none",
     "chat.disableAIFeatures": true,
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.detectIndentation": true,
+    "editor.fontFamily": "'Cascadia Code', 'Droid Sans Mono', 'monospace', monospace, 'Symbols Nerd Font Mono'",
+    "editor.inlineSuggest.enabled": true,
+    "editor.lineNumbers": "relative",
+    "editor.renderControlCharacters": true,
+    "editor.tabCompletion": "off",
+    "editor.tabSize": 2,
     "gitlab.duoChat.enabled": false,
+    "html.autoClosingTags": false,
     "telemetry.telemetryLevel": "off",
-    "editor.tabSize": 2
+    "update.mode": "none",
+    "window.titleBarStyle": "custom"
 }
