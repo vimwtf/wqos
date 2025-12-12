@@ -41,8 +41,8 @@ echo "::endgroup::"
 # Install Docker
 /ctx/build/20-docker.sh
 
-# Install VSCodium
-/ctx/build/21-vscodium.sh
+# Install VSCode
+/ctx/build/21-vscode.sh
 
 echo "::group:: System Configuration"
 
