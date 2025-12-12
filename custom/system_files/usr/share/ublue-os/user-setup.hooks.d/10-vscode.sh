@@ -15,3 +15,4 @@ fi
 code --install-extension ms-vscode-remote.remote-containers
 code --install-extension ms-vscode-remote.remote-ssh
 code --install-extension ms-azuretools.vscode-containers
+code --install-extension Catppuccin.catppuccin-vsc
