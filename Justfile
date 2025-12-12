@@ -37,12 +37,11 @@ fix:
 clean:
     #!/usr/bin/bash
     set -eoux pipefail
-    touch _build
-    find *_build* -exec rm -rf {} \;
+    rm -rf _build-* 
     rm -f previous.manifest.json
     rm -f changelog.md
     rm -f output.env
-    rm -f output/
+    rm -rf output/
 
 # Sudo Clean Repo
 [group('Utility')]
