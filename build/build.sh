@@ -33,16 +33,16 @@ find /ctx/custom/ujust -iname '*.just' -exec printf "\n\n" \; -exec cat {} \; >>
 echo "::endgroup::"
 
 # Preload Flatpaks
-/ctx/build/15-flatpaks.sh
+/ctx/build/10-flatpaks.sh
 
-# Install additional packages
-/ctx/build/20-packages.sh
+# Install additional system packages
+/ctx/build/11-packages.sh
 
 # Install Docker
-/ctx/build/21-docker.sh
+/ctx/build/20-docker.sh
 
 # Install VSCodium
-/ctx/build/22-vscodium.sh
+/ctx/build/21-vscodium.sh
 
 echo "::group:: System Configuration"
 
@@ -55,9 +55,9 @@ systemctl enable dx-groups.service
 # Example: systemctl mask unwanted-service
 
 # Ensure all repos are disabled
-/ctx/build/validate-repos.sh
+/ctx/build/98-validate-repos.sh
 
 # Cleanup
-/ctx/build/clean-stage.sh
+/ctx/build/99-clean-stage.sh
 
 echo "Custom build complete!"
