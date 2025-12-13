@@ -4,7 +4,6 @@
 #######################
 ## Example system configuration commands
 ## These are simplified examples adapted from Bluefin
-
 # Example toggle command with user choice
 # [group('System')]
 # toggle-example-feature:
@@ -35,4 +34,3 @@ clean-containers:
     podman system prune -af
     podman volume prune -f
     echo "Cleanup complete!"
-

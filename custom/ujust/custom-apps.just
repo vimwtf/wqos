@@ -28,11 +28,11 @@ install-fonts:
 
 # Install language servers via Homebrew
 [group('Apps')]
-install-fonts:
+install-language-servers:
     #!/usr/bin/env bash
     echo "Installing language servers via Homebrew..."
     brew bundle --file /usr/share/ublue-os/homebrew/language-servers.Brewfile
- 
+
 # Install all Brewfiles at once
 [group('Apps')]
 install-all-brew:
