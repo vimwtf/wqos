@@ -26,6 +26,13 @@ install-fonts:
     echo "Installing fonts via Homebrew..."
     brew bundle --file /usr/share/ublue-os/homebrew/fonts.Brewfile
 
+# Install language servers via Homebrew
+[group('Apps')]
+install-fonts:
+    #!/usr/bin/env bash
+    echo "Installing language servers via Homebrew..."
+    brew bundle --file /usr/share/ublue-os/homebrew/language-servers.Brewfile
+ 
 # Install all Brewfiles at once
 [group('Apps')]
 install-all-brew:
@@ -34,6 +41,7 @@ install-all-brew:
     brew bundle --file /usr/share/ublue-os/homebrew/default.Brewfile
     brew bundle --file /usr/share/ublue-os/homebrew/development.Brewfile
     brew bundle --file /usr/share/ublue-os/homebrew/fonts.Brewfile
+    brew bundle --file /usr/share/ublue-os/homebrew/language-servers.Brewfile
 
 # Install a Flatpak application from Flathub
 [group('Apps')]
